@@ -3,6 +3,7 @@
 
 void max(int arr[], int sz)
 {
+        int flag = 1;		//当第一次进去比较完并没有改变顺序
 	int i = 0;
 	int j = 0;
 	int tmp = 0;
@@ -15,8 +16,13 @@ void max(int arr[], int sz)
 				tmp = arr[j];
 				arr[j] = arr[j + 1];
 				arr[j + 1] = tmp;
+                                flag = 0;
 			}
 		}
+              if(flag == 1)
+              {
+                  break;              
+              }
 	}
 }
 int main()
