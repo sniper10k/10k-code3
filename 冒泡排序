@@ -3,12 +3,12 @@
 
 void max(int arr[], int sz)
 {
-        int flag = 1;		//当第一次进去比较完并没有改变顺序
 	int i = 0;
 	int j = 0;
 	int tmp = 0;
 	for (i = 0; i < sz - 1; i++)	//冒号排序需要的次数	10个数只需要比较9次
 	{
+		int flag = 1;		//当第一次进去比较完并没有改变顺序
 		for (j = 0; j < sz - 1 - i; j++)	//相邻两个数	比较次数	第一次i=0	比较9次
 		{
 			if (arr[j] > arr[j + 1])	//第一次sz-1-i==9	j=8时是最后一次正好arr[8]和arr[9]比较！
